@@ -92,6 +92,7 @@ const AddProduct = () => {
   }
 );
 
+
       setSuccess('✅ Produit ajouté avec succès !');
       
       // Réinitialiser le formulaire
