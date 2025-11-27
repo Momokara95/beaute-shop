@@ -7,6 +7,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="container">
         <div className="footer-content">
+
           {/* About Section */}
           <div className="footer-section">
             <h3>✨ BeautéShop</h3>
@@ -14,11 +15,13 @@ const Footer = () => {
               Votre destination beauté en ligne. Des produits cosmétiques 
               de qualité pour sublimer votre routine quotidienne.
             </p>
+
             <div className="social-links">
-              <a href="#" aria-label="Facebook">📘</a>
-              <a href="#" aria-label="Instagram">📷</a>
-              <a href="#" aria-label="Twitter">🐦</a>
-              <a href="#" aria-label="Pinterest">📌</a>
+              {/* Désactivé mais sans erreur d’accessibilité */}
+              <button aria-label="Facebook" className="social-btn">📘</button>
+              <button aria-label="Instagram" className="social-btn">📷</button>
+              <button aria-label="Twitter" className="social-btn">🐦</button>
+              <button aria-label="Pinterest" className="social-btn">📌</button>
             </div>
           </div>
 
@@ -48,11 +51,11 @@ const Footer = () => {
           <div className="footer-section">
             <h4>Service client</h4>
             <ul>
-              <li><a href="#">FAQ</a></li>
-              <li><a href="#">Livraison</a></li>
-              <li><a href="#">Retours</a></li>
-              <li><a href="#">Conditions générales</a></li>
-              <li><a href="#">Politique de confidentialité</a></li>
+              <li><Link to="/faq">FAQ</Link></li>
+              <li><Link to="/shipping">Livraison</Link></li>
+              <li><Link to="/returns">Retours</Link></li>
+              <li><Link to="/terms">Conditions générales</Link></li>
+              <li><Link to="/privacy">Politique de confidentialité</Link></li>
             </ul>
           </div>
 
@@ -69,9 +72,9 @@ const Footer = () => {
               <button type="submit">S'inscrire</button>
             </form>
           </div>
+
         </div>
 
-        {/* Copyright */}
         <div className="footer-bottom">
           <p>© 2024 BeautéShop. Tous droits réservés.</p>
           <div className="payment-methods">
@@ -80,6 +83,7 @@ const Footer = () => {
             <span>🔒</span>
           </div>
         </div>
+
       </div>
     </footer>
   );

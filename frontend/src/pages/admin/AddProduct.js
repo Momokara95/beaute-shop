@@ -81,16 +81,16 @@ const AddProduct = () => {
         seoKeywords: formData.seoKeywords ? formData.seoKeywords.split(',').map(k => k.trim()) : []
       };
 
-      const { data } = await axios.post(
-        'http://localhost:5000/api/products',
-        productData,
-        {
-          headers: {
-            'Authorization': `Bearer ${token}`,
-            'Content-Type': 'application/json'
-          }
-        }
-      );
+     const { data } = await axios.post(
+  `${import.meta.env.VITE_API_URL}/api/products`,
+  productData,
+  {
+    headers: {
+      'Authorization': `Bearer ${token}`,
+      'Content-Type': 'application/json'
+    }
+  }
+);
 
       setSuccess('✅ Produit ajouté avec succès !');
       
