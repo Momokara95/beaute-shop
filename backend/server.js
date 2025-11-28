@@ -18,7 +18,7 @@ app.use(helmet());
 
 // -------------------- CORS --------------------
 const allowedOrigins = [
-  'http://localhost:3000',
+  'https://beaute-shop-production.up.railway.app/api',
   'http://127.0.0.1:3000',
 ];
 
@@ -91,7 +91,7 @@ connectDB().then(() => {
     console.log(`
 🚀 Serveur démarré sur le port ${PORT}
 🌍 Mode: ${process.env.NODE_ENV || 'development'}
-📡 API Local: http://localhost:${PORT}/api
+📡 API Local: :https://beaute-shop-production.up.railway.app/api/api
     `);
   });
 });
